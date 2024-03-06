@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SHIFT3</title>
+        <meta charset="utf-8">
+        <style>
+            body, header{
+                margin: 0px;
+                height: 100%;
+                width: 100%;
+            }
+            .header{
+                background-color: #001c63;
+                color: white;
+                display: grid;
+                grid-template-columns: 7fr 4fr;
+            }
+            a{
+                color: inherit;
+                text-decoration: none;
+            }
+            h1{
+                margin: 0px;
+                font-weight: bold;
+                font-size: 50px;
+                padding-top: 20px;
+                padding-left: 30px;
+                padding-bottom: 5px;
+            }
+            h2{
+                margin: 0px;
+                width: 885px;
+            }
+            .mini_head{
+                padding-left: 36px;
+                padding-bottom: 20px;
+            }
+            .menu{
+                padding-top: 30px;
+                padding-right: 40px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                list-style-type: none;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            
+            
+        
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="big_head">
+                <h1 ><a href="index.html"><strong>SHIFT3</strong></a></h1>
+                <div class="mini_head">모든 편집샵을 연결하다</div>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li>Content</li>
+                    <li>Map</li>
+                    <li>My page</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="map" style="width:100%;height:700px;">
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cac661262377c2166cd003f5af3116a3"></script>
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+            </div>
+            <script>
+                var container = document.getElementById('map');
+                var options = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667),
+                    level: 3
+                };
+                var map = new kakao.maps.Map(container, options);
+            </script>
+
+        </main>
+    </body>
+</html>
